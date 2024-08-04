@@ -16,11 +16,10 @@
 }
 
 .navbar-default {
-    background-color: blue; /* اللون الأزرق للأقسام الأخرى */
+    background-color:  #394257 ; 
 }
 
 .navbar-scrolled {
-    background: linear-gradient(to right, rgba(47, 46, 46, 0.5), rgba(0,0,0,0.5)), url(../images/hero-bg.jpg);
     background-size: cover;
     background-blend-mode: overlay;
 }
