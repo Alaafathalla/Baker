@@ -5,6 +5,25 @@
 .nav-link:active {
     color: #ff9707 !important; 
 }
+/* في ملف css/style.css */
+
+.navbar-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-default {
+    background-color: blue; /* اللون الأزرق للأقسام الأخرى */
+}
+
+.navbar-scrolled {
+    background: linear-gradient(to right, rgba(47, 46, 46, 0.5), rgba(0,0,0,0.5)), url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
 
 
 .header{
@@ -35,4 +54,7 @@
 }
 .client-logo:hover{
     filter: none;
+}
+.class{
+    height: 150vh;
 }
