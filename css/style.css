@@ -23,3 +23,12 @@
 .header .btn :hover{
  color: white;
 }
+.logo{
+  background-color: #f6f8fa;
+}
+.client-logo{
+    filter: grayscale(100);
+}
+.client-logo:hover{
+    filter: none;
+}
