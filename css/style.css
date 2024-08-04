@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+.nav-link:active {
+    color: #ff9707 !important; 
+}
+
 
 .header{
     background: linear-gradient(to right, rgba(47, 46, 46, 0.5), rgba(0,0,0,0.5)), url(../images/hero-bg.jpg);
