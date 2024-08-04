@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background: linear-gradient(to right, rgba(47, 46, 46, 0.5), rgba(0,0,0,0.5)), url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    text-align: center; 
+    color: white;
+    opacity: 0.7;
+}
+.header .btn{
+    border-radius: 20px;
+    color: white;
+}
+.header .btn :hover{
+ color: white;
+}
