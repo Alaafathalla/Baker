@@ -65,3 +65,27 @@
 .class{
     height: 150vh;
 }
+.iconbox{
+    background-color: #ff9707;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.iconright{
+    padding-left: 1.5rem;
+}
+.about i{
+    color:#ffffff;
+    font-size: 1.6rem;
+}
+.about h3{
+    font-size: 1.7rem;
+    color: #414c64;
+    font-weight: 700;
+}
+.about h5{
+    color: #414c64;
+
+}
