@@ -105,3 +105,18 @@
     transform: translate(-50%, -50%);
     font-size: 24px; 
   }
+  .call {
+    background-color: #414c64;
+    color: white;
+
+  }
+  .call .btn {
+    border: #ff9707 2px solid !important;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.1rem;
+  }
+  .call .btn:hover{
+color: white;
+background-color: #ff9707;
+  }
