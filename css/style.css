@@ -160,3 +160,35 @@ background-color: #ff9707;
     font-size: .9rem;
     opacity: .6;
 }
+.iconteam{
+    font-size: 1.3rem;
+}
+.team1 {
+    position: relative;
+ }
+
+.overlay {
+    position: absolute; 
+    bottom:92px; 
+    left: 0; 
+    right: 0; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+   opacity: 0;
+}
+
+.team2 {
+    text-align: center; 
+    padding: 10px;
+}
+.team1:hover .overlay {
+    opacity: 1; 
+}
+
+
+.iconteam:hover i {
+    color: #ffffff !important; 
+    background-color: #ff9707;
+}
