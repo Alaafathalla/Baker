@@ -114,9 +114,33 @@
     border: #ff9707 2px solid !important;
     color: white;
     border-radius: 20px;
-    font-size: 1.1rem;
+    font-size: 1.1
+    rem;
   }
   .call .btn:hover{
 color: white;
 background-color: #ff9707;
   }
+
+  .Testimonials img{
+   border-radius: 50%;
+  }
+  .Testimonials i {
+    color: #ff9707;
+    font-size: 1..3rem;
+    opacity: .5;
+  }
+  .Testimonials h2 {
+    color: #414c64;
+    position: relative;
+    padding-bottom: 10px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.Testimonials h2::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0 auto; /* Adjust the margin for spacing */
+    border-bottom: 3px solid #ff9707;
+    width: 50px;
+}
