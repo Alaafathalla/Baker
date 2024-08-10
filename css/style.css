@@ -133,14 +133,20 @@ background-color: #ff9707;
   .Testimonials h2 {
     color: #414c64;
     position: relative;
-    padding-bottom: 10px; /* Adjust padding as needed */
     text-align: center;
 }
 
 .Testimonials h2::after {
     content: "";
     display: block;
-    margin: 10px auto 0 auto; /* Adjust the margin for spacing */
+    margin: 10px auto 0 auto; 
     border-bottom: 3px solid #ff9707;
-    width: 50px;
+    width: 60px;
+}
+.team1{
+    box-shadow: 2px 2px 10px gray;
+
+}
+.team2{
+    background-color: #ffffff;
 }
