@@ -187,8 +187,9 @@ background-color: #ff9707;
     opacity: 1; 
 }
 
-
+.iconteam:hover {
+    color: #ff9707;
+}
 .iconteam:hover i {
-    color: #ffffff !important; 
-    background-color: #ff9707;
+    background-color: #ffffff !important;
 }
