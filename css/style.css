@@ -131,14 +131,16 @@ background-color: #ff9707;
     opacity: .5;
   }
   .Testimonials h2,
-  .team h2 {
+  .team h2,
+  .pricing h2 {
     color: #414c64;
     position: relative;
     text-align: center;
 }
 
 .Testimonials h2,
-.team h2::after {
+.team h2,
+.pricing h2::after {
     content: "";
     display: block;
     margin: 10px auto 0 auto; 
@@ -193,7 +195,8 @@ background-color: #ff9707;
 .iconteam:hover i {
     background-color: #ffffff !important;
 }
-.pricing .btn{
+.pricing .btn,
+.Business{
     background-color: #ff9707;
     color: #ffffff;
 }
@@ -207,3 +210,4 @@ opacity: .7 !important;
 background-color: #ff9707;
 color: #ffffff;
 }
+
