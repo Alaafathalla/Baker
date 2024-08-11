@@ -188,7 +188,7 @@ background-color: #ff9707;
 }
 
 .iconteam:hover {
-    color: #ff9707;
+    color: #ff9707 !important;
 }
 .iconteam:hover i {
     background-color: #ffffff !important;
