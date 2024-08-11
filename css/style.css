@@ -193,3 +193,17 @@ background-color: #ff9707;
 .iconteam:hover i {
     background-color: #ffffff !important;
 }
+.pricing .btn{
+    background-color: #ff9707;
+    color: #ffffff;
+}
+/* Override the padding using custom styles */
+.no-gutter {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.pricing .btn:hover{
+opacity: .7 !important;
+background-color: #ff9707;
+color: #ffffff;
+}
