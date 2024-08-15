@@ -46,44 +46,31 @@ window.onclick = function(event) {
 
 
 const increment = 60;
-const duration = 1000; // Duration of each animation loop in milliseconds
 
-function easeOutQuad(t) {
-    return t * (2 - t);
-}
-
-function animateNumber(id, start, end, duration, callback) {
-    const obj = document.getElementById(id);
-    let startTimestamp = null;
-    const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        const easedProgress = easeOutQuad(progress);
-        obj.textContent = Math.floor(easedProgress * (end - start) + start);
-        if (progress < 1) {
-            window.requestAnimationFrame(step);
-        } else if (callback) {
-            callback();
-        }
-    };
-    window.requestAnimationFrame(step);
-}
-
-function loopNumber(id, startValue, increment, duration) {
-    const endValue = startValue + increment;
-    animateNumber(id, startValue, endValue, duration, () => {
-        // After reaching the end value, loop back to the original value
-        animateNumber(id, endValue, startValue, duration, () => {
-            loopNumber(id, startValue, increment, duration);
-        });
-    });
+function updateNumber(id, initialValue) {
+    const previousValue = parseInt(localStorage.getItem(id)) || initialValue;
+    const newValue = previousValue + increment;
+    document.getElementById(id).setAttribute('data-target', newValue);
+    localStorage.setItem(id, newValue);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loopNumber("clients", 232, increment, duration);
-    loopNumber("projects", 521, increment, duration);
-    loopNumber("support", 1453, increment, duration);
-    loopNumber("workers", 32, increment, duration);
+    // Update the values in localStorage and set them as targets
+    updateNumber("clients", 232);
+    updateNumber("projects", 521);
+    updateNumber("support", 1453);
+    updateNumber("workers", 32);
+
+    // Initialize Counter-Up
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const target = +counter.getAttribute('data-target');
+        CounterUp(counter, {
+            duration: 2000, // duration in milliseconds
+            delay: 16, // delay in milliseconds
+        });
+    });
 });
 
 
