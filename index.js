@@ -11,11 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             navbar.classList.add("navbar-scrolled");
         }
 
-        if (window.scrollY > 0) {
-            navbar.classList.add("navbar-sticky");
-        } else {
-            navbar.classList.remove("navbar-sticky");
-        }
+        navbar.classList.toggle("navbar-sticky", window.scrollY > 0);
     }
 
     // Initial check to set the navbar state correctly on page load
@@ -23,56 +19,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update the navbar state on scroll
     window.addEventListener("scroll", handleScroll);
-});
+    
+    // Dropdown toggle functionality
+    document.querySelector('.dropdown-btn').addEventListener('click', function() {
+        var content = document.querySelector('.dropdown-content');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
 
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropdown-btn')) {
+            var dropdowns = document.querySelectorAll(".dropdown-content");
+            dropdowns.forEach(function(dropdown) {
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+    });
 
-document.querySelector('.dropdown-btn').addEventListener('click', function() {
-    var content = document.querySelector('.dropdown-content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-});
+    // Counter animation
+    const counts = document.querySelectorAll(".count");
+    const speed = 397; // You can adjust the speed as needed
+    
+    counts.forEach((count) => {
+        function update() {
+            const target = Number(count.getAttribute("data-target"));
+            const counter = Number(count.innerText);
+            const inc = target / speed;
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-btn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === 'block') {
-                openDropdown.style.display = 'none';
+            if (counter < target) {
+                count.innerText = Math.ceil(counter + inc);
+                requestAnimationFrame(update); // Use requestAnimationFrame for smoother animation
+            } else {
+                count.innerText = target;
             }
         }
-    }
-}
-
-
-const increment = 60;
-
-function updateNumber(id, initialValue) {
-    const previousValue = parseInt(localStorage.getItem(id)) || initialValue;
-    const newValue = previousValue + increment;
-    document.getElementById(id).setAttribute('data-target', newValue);
-    localStorage.setItem(id, newValue);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Update the values in localStorage and set them as targets
-    updateNumber("clients", 232);
-    updateNumber("projects", 521);
-    updateNumber("support", 1453);
-    updateNumber("workers", 32);
-
-    // Initialize Counter-Up
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        counter.innerText = '0';
-        const target = +counter.getAttribute('data-target');
-        CounterUp(counter, {
-            duration: 2000, // duration in milliseconds
-            delay: 16, // delay in milliseconds
-        });
+        update();
     });
 });
 
-
+      
 
 
