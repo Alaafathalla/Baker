@@ -77,31 +77,38 @@
     padding-left: 1.5rem;
 }
 
+
 .stats-container {
-    display: flex;
-    gap: 20px;
-    text-align: center;
+    background-color: #f8f9fa;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .stat {
-    font-size: 24px;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.stat h2{
+    font-size: 3rem;
+}
+.stat:hover {
+    transform: translateY(-5px);
 }
 
-.stat h2 {
-    font-size: 48px;
-    color: #61dafb;
-    animation: glow 1s infinite alternate;
+.stat p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #6c757d;
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 20px #61dafb, 0 0 30px #61dafb, 0 0 40px #61dafb;
+
+@media (max-width: 767.98px) {
+    .col-md-3 {
+        margin-bottom: 2rem; 
     }
-    100% {
-        text-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb;
-    }
 }
-
 
 .about i{
     color:#ffffff;
