@@ -329,22 +329,16 @@ color: #ffffff;
     list-style: none;
 }
 
-.footer ul li a {
 
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
 
-.footer ul li a:hover {
-    /* color: #dddddd; */
-}
-
-.footer a i {
+.footer a  {
     font-size: 18px;
+    color:  #444444 !important; 
+    text-decoration: none;
 }
 
-.footer a i:hover {
-    /* color: #dddddd; */
+.footericon{
+    border: 1px sloid #444444 !important;
 }
 
 .footer .text-center {
