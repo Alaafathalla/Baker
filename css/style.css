@@ -161,6 +161,43 @@ color: white;
 background-color: #ff9707;
   }
 
+/* General styles */
+.gallery img {
+    object-fit: cover;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Initially show all photos */
+.photo {
+    opacity: 1;
+    transform: translateY(0); /* No transformation */
+    display: block;
+}
+
+/* Animation for hiding elements */
+.photo.hide {
+    opacity: 0;
+    transform: translateY(20px); /* Slide down out of view */
+    display: none;
+}
+
+/* Animation for showing elements */
+.photo.show {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to normal position */
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+  
   .Testimonials img{
    border-radius: 50%;
   }
@@ -171,7 +208,9 @@ background-color: #ff9707;
   }
   .Testimonials h2,
   .team h2,
-  .pricing h2 {
+  .pricing h2,
+  .services h2,
+  .gallery h2 {
     color: #414c64;
     position: relative;
     text-align: center;
@@ -179,7 +218,9 @@ background-color: #ff9707;
 
 .Testimonials h2,
 .team h2,
-.pricing h2::after {
+.pricing h2,
+.services h2,
+.gallery h2::after {
     content: "";
     display: block;
     margin: 10px auto 0 auto; 

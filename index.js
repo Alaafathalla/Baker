@@ -59,6 +59,35 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const filters = document.querySelectorAll('input[name="filter"]');
+    const photos = document.querySelectorAll('.photo');
+
+    filters.forEach(filter => {
+        filter.addEventListener('change', function () {
+            const filterType = this.id;
+
+            photos.forEach(photo => {
+                if (filterType === 'all' || photo.classList.contains(filterType)) {
+                    photo.classList.remove('hide');
+                    setTimeout(() => {
+                        photo.classList.add('show');
+                    }, 10); // Small delay to allow the 'hide' class to be removed before applying 'show'
+                } else {
+                    photo.classList.remove('show');
+                    setTimeout(() => {
+                        photo.classList.add('hide');
+                    }, 500); // Delay matches the CSS transition duration
+                }
+            });
+        });
+    });
+
+    // Trigger the 'All' filter by default, showing all photos
+    filters[0].click();
+});
+
       
 
 
