@@ -89,5 +89,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
       
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('active');
+
+        const answer = parent.querySelector('.faq-answer');
+        if (parent.classList.contains('active')) {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    });
+});
 
 

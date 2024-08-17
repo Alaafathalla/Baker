@@ -168,36 +168,28 @@ background-color: #ff9707;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-/* Initially show all photos */
+
 .photo {
     opacity: 1;
-    transform: translateY(0); /* No transformation */
+    transform: rotateY(90deg); 
     display: block;
 }
-
-/* Animation for hiding elements */
+.gallery input:active{
+    color: #ff9707 !important;
+}
 .photo.hide {
     opacity: 0;
-    transform: translateY(20px); /* Slide down out of view */
+    transform: rotateY(90deg);
     display: none;
 }
 
-/* Animation for showing elements */
 .photo.show {
     opacity: 1;
-    transform: translateY(0); /* Slide up to normal position */
+    transform: rotateY(0); 
     display: block;
 }
 
 
-
-
-
-
-
-
-
-  
   .Testimonials img{
    border-radius: 50%;
   }
@@ -218,7 +210,6 @@ background-color: #ff9707;
 
 .Testimonials h2,
 .team h2,
-.pricing h2,
 .services h2,
 .gallery h2::after {
     content: "";
@@ -291,48 +282,79 @@ background-color: #ff9707;
 color: #ffffff;
 }
 
+/* .faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease-in-out;
+} */
+
+/* .faq-item:hover {
+    background-color: #f1f1f1;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    opacity: 0;
+}
+
+.faq-item p:hover{
+    opacity: 1;
+} */
+
+
+
 body {
     font-family: Arial, sans-serif;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.text-center {
+    margin-bottom: 30px;
 }
 
-.dropdown-btn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
     cursor: pointer;
-    border-radius: 4px;
 }
 
-.dropdown-content {
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.faq-answer {
+    font-size: 16px;
+    color: #555;
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 4px;
+    margin-top: 10px;
 }
 
-.dropdown-content p, .dropdown-content a {
-    color: black;
-    padding: 8px 0;
-    text-decoration: none;
+.faq-item.active .faq-answer {
     display: block;
 }
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
