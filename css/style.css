@@ -329,7 +329,6 @@ body {
 }
 
 .faq-section {
-    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -345,7 +344,7 @@ body {
 .faq-question {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #ff9707;
 }
 
 .faq-answer {
