@@ -314,10 +314,6 @@ color: #ffffff;
     display: block;
 }
 
-.footer {
-    background-color: #343a40;
-    color: #ffffff;
-}
 
 .footer h5 {
     font-size: 18px;
@@ -334,13 +330,13 @@ color: #ffffff;
 }
 
 .footer ul li a {
-    color: #ffffff;
+
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer ul li a:hover {
-    color: #dddddd;
+    /* color: #dddddd; */
 }
 
 .footer a i {
@@ -348,7 +344,7 @@ color: #ffffff;
 }
 
 .footer a i:hover {
-    color: #dddddd;
+    /* color: #dddddd; */
 }
 
 .footer .text-center {
