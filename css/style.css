@@ -202,7 +202,8 @@ background-color: #ff9707;
   .team h2,
   .pricing h2,
   .services h2,
-  .gallery h2 {
+  .gallery h2,
+  .questions h2 {
     color: #414c64;
     position: relative;
     text-align: center;
@@ -211,6 +212,7 @@ background-color: #ff9707;
 .Testimonials h2,
 .team h2,
 .services h2,
+.pricing h2,
 .gallery h2::after {
     content: "";
     display: block;
@@ -282,52 +284,6 @@ background-color: #ff9707;
 color: #ffffff;
 }
 
-/* .faq-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s ease-in-out;
-} */
-
-/* .faq-item:hover {
-    background-color: #f1f1f1;
-}
-
-.faq-item h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.faq-item p {
-    font-size: 16px;
-    color: #555;
-    margin: 0;
-    opacity: 0;
-}
-
-.faq-item p:hover{
-    opacity: 1;
-} */
-
-
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.text-center {
-    margin-bottom: 30px;
-}
-
 .faq-section {
     margin: 0 auto;
 }
@@ -356,4 +312,46 @@ body {
 
 .faq-item.active .faq-answer {
     display: block;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer p, .footer ul {
+    font-size: 14px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #dddddd;
+}
+
+.footer a i {
+    font-size: 18px;
+}
+
+.footer a i:hover {
+    color: #dddddd;
+}
+
+.footer .text-center {
+    margin-top: 20px;
+    font-size: 14px;
 }
