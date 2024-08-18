@@ -80,24 +80,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Trigger the 'All' filter by default, showing all photos
     filters[0].click();
 });
 
       
-document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', () => {
-        const parent = item.parentElement;
-        parent.classList.toggle('active');
-
-        const answer = parent.querySelector('.faq-answer');
-        if (parent.classList.contains('active')) {
+document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const icon = item.querySelector('.faq-icon');
+    
+    // Function to toggle FAQ answer
+    const toggleAnswer = () => {
+        item.classList.toggle('active');
+        
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
             answer.style.display = 'block';
+            icon.style.transform = 'rotate(180deg)'; // Rotate the icon when active
         } else {
             answer.style.display = 'none';
+            icon.style.transform = 'rotate(0deg)'; // Rotate icon back when inactive
         }
-    });
+    };
+
+    // Add click event listeners to both the question and the icon
+    question.addEventListener('click', toggleAnswer);
+    icon.addEventListener('click', toggleAnswer);
 });
+
 
 
 let mybutton = document.getElementById("scrollBtn");

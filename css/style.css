@@ -213,14 +213,21 @@ background-color: #ff9707;
 .team h2,
 .services h2,
 .pricing h2,
-.gallery h2::after {
+.gallery h2,
+.questions h2::after {
     content: "";
     display: block;
     margin: 10px auto 0 auto; 
     border-bottom: 3px solid #ff9707;
     width: 60px;
 }
-
+.questions h2 ::after{
+    /* content: "";
+    display: block;
+    margin: 10px auto 0 auto; 
+    border-bottom: 3px solid #ff9707; */
+    width:160px !important ;
+}
 .team2{
     background-color: #ffffff;
 }
@@ -313,7 +320,10 @@ color: #ffffff;
 .faq-item.active .faq-answer {
     display: block;
 }
-
+.faq-section i {
+    color: #ff9707;
+    font-size: 1.5rem;
+}
 
 .footer p, .footer ul {
     font-size: 14px;
@@ -326,7 +336,7 @@ color: #ffffff;
 
 .footer a  {
     font-size: 18px;
-    color:  #444444 !important; 
+    color:  #747272 !important; 
     text-decoration: none;
 }
 
