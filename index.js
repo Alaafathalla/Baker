@@ -14,19 +14,15 @@ document.addEventListener("DOMContentLoaded", function() {
         navbar.classList.toggle("navbar-sticky", window.scrollY > 0);
     }
 
-    // Initial check to set the navbar state correctly on page load
     handleScroll();
 
-    // Update the navbar state on scroll
     window.addEventListener("scroll", handleScroll);
-    
-    // Dropdown toggle functionality
+
     document.querySelector('.dropdown-btn').addEventListener('click', function() {
         var content = document.querySelector('.dropdown-content');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 
-    // Close the dropdown if the user clicks outside of it
     window.addEventListener('click', function(event) {
         if (!event.target.matches('.dropdown-btn')) {
             var dropdowns = document.querySelectorAll(".dropdown-content");
@@ -40,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Counter animation
     const counts = document.querySelectorAll(".count");
-    const speed = 397; // You can adjust the speed as needed
+    const speed = 600; // You can adjust the speed as needed
     
     counts.forEach((count) => {
         function update() {
@@ -50,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (counter < target) {
                 count.innerText = Math.ceil(counter + inc);
-                requestAnimationFrame(update); // Use requestAnimationFrame for smoother animation
+                requestAnimationFrame(update); 
             } else {
                 count.innerText = target;
             }
@@ -73,12 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     photo.classList.remove('hide');
                     setTimeout(() => {
                         photo.classList.add('show');
-                    }, 10); // Small delay to allow the 'hide' class to be removed before applying 'show'
+                    }, 10); 
                 } else {
                     photo.classList.remove('show');
                     setTimeout(() => {
                         photo.classList.add('hide');
-                    }, 500); // Delay matches the CSS transition duration
+                    }, 500); 
                 }
             });
         });
