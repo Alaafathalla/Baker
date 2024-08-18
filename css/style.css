@@ -204,30 +204,25 @@ background-color: #ff9707;
   .services h2,
   .gallery h2,
   .questions h2 {
-    color: #414c64;
-    position: relative;
-    text-align: center;
-}
+      color: #414c64;
+      position: relative;
+      text-align: center;
+  }
+  
+  .Testimonials h2::after,
+  .team h2::after,
+  .services h2::after,
+  .pricing h2::after,
+  .gallery h2::after,
+  .questions h2::after {
+      content: "";
+      display: block;
+      margin: 10px auto 0 auto; 
+      border-bottom: 3px solid #ff9707;
+      width: 60px; 
+  }
+  
 
-.Testimonials h2,
-.team h2,
-.services h2,
-.pricing h2,
-.gallery h2,
-.questions h2::after {
-    content: "";
-    display: block;
-    margin: 10px auto 0 auto; 
-    border-bottom: 3px solid #ff9707;
-    width: 60px;
-}
-.questions h2 ::after{
-    /* content: "";
-    display: block;
-    margin: 10px auto 0 auto; 
-    border-bottom: 3px solid #ff9707; */
-    width:160px !important ;
-}
 .team2{
     background-color: #ffffff;
 }
