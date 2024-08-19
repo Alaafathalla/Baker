@@ -1,19 +1,18 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-/* Default state */
+
 .nav-link {
     color: #ffffff !important;
     text-decoration: none;
     padding: 10px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
-.nav-item a:focus{
-    color: #ff9707 !important; 
+.nav-item a:focus {
+    color: #ff9707 !important;
 }
-
 
 .navbar-sticky {
     position: fixed;
@@ -24,7 +23,7 @@
 }
 
 .navbar-default {
-    background-color:  #394257 ; 
+    background-color: #394257;
 }
 
 .navbar-scrolled {
@@ -32,40 +31,46 @@
     background-blend-mode: overlay;
 }
 
-
-.header{
-    background: linear-gradient(to right, rgba(85, 100, 130, 1), rgba(65, 67 ,99, 1)), url(../images/hero-bg.jpg);
+.header {
+    background: linear-gradient(to right, rgba(85, 100, 130, 1), rgba(65, 67, 99, 1)), url(../images/hero-bg.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh; 
-    text-align: center; 
+    height: 80vh;
+    text-align: center;
     color: white;
     opacity: 0.7;
 }
-.header .btn{
+
+.header .btn {
     border-radius: 20px;
     color: white;
 }
-.header .btn :hover{
- color: white;
+
+.header .btn:hover {
+    color: white;
 }
-.logo{
-  background-color: #f6f8fa;
+
+.logo {
+    background-color: #f6f8fa;
 }
-.client-logo{
-    filter: grayscale(100);
+
+.client-logo {
+    filter: grayscale(100%);
 }
-.client-logo:hover{
+
+.client-logo:hover {
     filter: none;
 }
-.class{
+
+.class {
     height: 150vh;
 }
-.iconbox{
+
+.iconbox {
     background-color: #ff9707;
     width: 70px;
     height: 60px;
@@ -73,10 +78,10 @@
     margin-right: 10px;
     border-radius: 5px;
 }
-.iconright{
+
+.iconright {
     padding-left: 1.5rem;
 }
-
 
 .stats-container {
     background-color: #f8f9fa;
@@ -90,9 +95,11 @@
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.stat h2{
+
+.stat h2 {
     font-size: 3rem;
 }
+
 .stat:hover {
     transform: translateY(-5px);
 }
@@ -103,130 +110,129 @@
     color: #6c757d;
 }
 
-
 @media (max-width: 767.98px) {
     .col-md-3 {
-        margin-bottom: 2rem; 
+        margin-bottom: 2rem;
     }
-  
 }
+
 @media (max-width: 576px) {
     .client-logo img {
-      width: 70%;
-      height: auto;
+        width: 70%;
+        height: auto;
     }
-  
+
     .client-logo {
-      text-align: center; 
+        text-align: center;
     }
-}  
+}
 
-  
-
-.about i{
-    color:#ffffff;
+.about i {
+    color: #ffffff;
     font-size: 1.6rem;
 }
-.about h3{
+
+.about h3 {
     font-size: 1.7rem;
     color: #414c64;
     font-weight: 700;
 }
-.about h5{
-    color: #414c64;
 
+.about h5 {
+    color: #414c64;
 }
-  .svg-container {
+
+.svg-container {
     position: relative;
     width: 100px;
     height: 100px;
-  }
-  .svg11{
+}
+
+.svg11 {
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .svg-container svg {
+}
+
+.svg-container svg {
     width: 100%;
     height: 100%;
-  }
-  .icon {
+}
+
+.icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px; 
-  }
-  .call {
+    font-size: 24px;
+}
+
+.call {
     background-color: #414c64;
     color: white;
-    
+}
 
-  }
-  .call .btn {
+.call .btn {
     border: #ff9707 2px solid !important;
     color: white;
     border-radius: 20px;
-    font-size: 1.1
-    rem;
-  }
-  .call .btn:hover{
-color: white;
-background-color: #ff9707;
-  }
+    font-size: 1.1rem;
+}
 
-  
-  @keyframes fadeIn {
+.call .btn:hover {
+    color: white;
+    background-color: #ff9707;
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
 
-  .Testimonials img{
-   border-radius: 50%;
-  }
-  .Testimonials i {
+.Testimonials img {
+    border-radius: 50%;
+}
+
+.Testimonials i {
     color: #ff9707;
-    font-size: 1..3rem;
-    opacity: .5;
-  }
-  .Testimonials h2,
-  .team h2,
-  .pricing h2,
-  .services h2,
-  .gallery h2,
-  .questions h2 {
-      color: #414c64;
-      position: relative;
-      text-align: center;
-  }
-  
-  .Testimonials h2::after,
-  .team h2::after,
-  .services h2::after,
-  .pricing h2::after,
-  .gallery h2::after,
-  .questions h2::after {
-      content: "";
-      display: block;
-      margin: 10px auto 0 auto; 
-      border-bottom: 3px solid #ff9707;
-      width: 60px; 
-  }
-  
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
 
-  /* Resetting padding and margin for all elements */
+.Testimonials h2,
+.team h2,
+.pricing h2,
+.services h2,
+.gallery h2,
+.questions h2 {
+    color: #414c64;
+    position: relative;
+    text-align: center;
+}
+
+.Testimonials h2::after,
+.team h2::after,
+.services h2::after,
+.pricing h2::after,
+.gallery h2::after,
+.questions h2::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0 auto;
+    border-bottom: 3px solid #ff9707;
+    width: 60px;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
-/* General styles for the gallery container */
 .container.gallery {
     text-align: center;
     padding: 2rem 0;
@@ -244,7 +250,6 @@ background-color: #ff9707;
     margin-bottom: 2rem;
 }
 
-/* Button group styles */
 .btn-group .btn {
     background-color: #f1f1f1;
     color: #333;
@@ -261,11 +266,11 @@ background-color: #ff9707;
     color: #fff;
 }
 
-.btn-group .btn:focus {
+.btn-group .btn:active {
     outline: none;
+    background-color: #ff9707;
 }
 
-/* Gallery grid */
 .row.gallery {
     display: flex;
     flex-wrap: wrap;
@@ -285,12 +290,10 @@ background-color: #ff9707;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Image hover effect: Zoom in */
 .photo:hover img {
     transform: scale(1.2);
 }
 
-/* Overlay styles */
 .gallery .overlay {
     position: absolute;
     top: 0;
@@ -305,16 +308,14 @@ background-color: #ff9707;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none; /* Prevents the overlay from interfering with the hover */
+    pointer-events: none;
 }
 
-/* Overlay hover effect: Slide up and appear */
 .photo:hover .overlay {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Overlay content */
 .overlay-content {
     text-align: center;
 }
@@ -326,7 +327,6 @@ background-color: #ff9707;
     animation: fadeIn 0.5s ease;
 }
 
-/* Keyframes for text animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -338,68 +338,76 @@ background-color: #ff9707;
     }
 }
 
-
-.team2{
+.team2 {
     background-color: #ffffff;
 }
+
 .team1 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.team h3{
+
+.team h3 {
     color: #414c64;
     font-size: 1.3rem;
 }
-.team1 p{
-    font-size: .9rem;
-    opacity: .6;
+
+.team1 p {
+    font-size: 0.9rem;
+    opacity: 0.6;
 }
-.iconteam{
+
+.iconteam {
     font-size: 1.3rem;
 }
+
 .team1 {
     position: relative;
- }
+}
 
 .overlay {
-    position: absolute; 
-    bottom:92px; 
-    left: 0; 
-    right: 0; 
-    padding: 10px; 
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-   opacity: 0;
+    position: absolute;
+    bottom: 92px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
 }
 
 .team2 {
-    text-align: center; 
+    text-align: center;
     padding: 10px;
 }
+
 .team1:hover .overlay {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .iconteam:hover {
     color: #ff9707 !important;
 }
+
 .iconteam:hover i {
     background-color: #ffffff !important;
 }
+
 .pricing .btn,
-.Business{
+.Business {
     background-color: #ff9707;
     color: #ffffff;
 }
-/* Override the padding using custom styles */
+
 .no-gutter {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
-.pricing .btn:hover{
-opacity: .7 !important;
-background-color: #ff9707;
-color: #ffffff;
+
+.pricing .btn:hover {
+    opacity: 0.7 !important;
+    background-color: #ff9707;
+    color: #ffffff;
 }
 
 .faq-section {
@@ -431,12 +439,14 @@ color: #ffffff;
 .faq-item.active .faq-answer {
     display: block;
 }
+
 .faq-section i {
     color: #ff9707;
     font-size: 1.5rem;
 }
 
-.footer p, .footer ul {
+.footer p,
+.footer ul {
     font-size: 14px;
 }
 
@@ -444,15 +454,14 @@ color: #ffffff;
     list-style: none;
 }
 
-
-.footer a  {
+.footer a {
     font-size: 18px;
-    color:  #747272 !important; 
+    color: #747272 !important;
     text-decoration: none;
 }
 
-.footericon{
-    border: 1px sloid #444444 !important;
+.footericon {
+    border: 1px solid #444444 !important;
 }
 
 .footer .text-center {
@@ -460,35 +469,25 @@ color: #ffffff;
     font-size: 14px;
 }
 
-.footer a:hover{
+.footer a:hover {
     color: #ff9707 !important;
 }
 
 #scrollBtn {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     bottom: 20px;
-    /* Place the button 20px from the bottom */
     right: 30px;
-    /* Place the button 30px from the right */
     z-index: 99;
-    /* Make sure it does not overlap */
     border: none;
-    /* Remove borders */
     outline: none;
-    /* Remove outline */
     background-color: #ff9707;
     color: white;
     cursor: pointer;
-    /* Add a mouse pointer on hover */
     padding: 15px;
-    /* Some padding */
     border-radius: 10px;
-    /* Rounded corners */
-  }
-  
-  #scrollBtn:hover {
-opacity: .7;
-  }
+}
+
+#scrollBtn:hover {
+    opacity: 0.7;
+}
