@@ -13,6 +13,9 @@
 .nav-item a:focus {
     color: #ff9707 !important;
 }
+.nav-item a:active {
+    color: #ff9707 !important;
+}
 
 .navbar-sticky {
     position: fixed;
@@ -228,10 +231,6 @@
     width: 60px;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
 
 .container.gallery {
     text-align: center;
@@ -337,6 +336,14 @@
         transform: translateY(0);
     }
 }
+
+.photo.hide {
+    display: none;
+}
+.photo.show {
+    display: block;
+}
+
 
 .team2 {
     background-color: #ffffff;

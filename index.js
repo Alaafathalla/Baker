@@ -109,6 +109,26 @@ document.querySelectorAll('.faq-item').forEach(item => {
     icon.addEventListener('click', toggleAnswer);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const filters = document.querySelectorAll("input[name='filter']");
+    const photos = document.querySelectorAll(".photo");
+
+    filters.forEach(filter => {
+        filter.addEventListener("change", function() {
+            const selectedCategory = this.id;
+
+            photos.forEach(photo => {
+                if (selectedCategory === "all" || photo.classList.contains(selectedCategory)) {
+                    photo.classList.add("show");
+                    photo.classList.remove("hide");
+                } else {
+                    photo.classList.add("hide");
+                    photo.classList.remove("show");
+                }
+            });
+        });
+    });
+});
 
 
 let mybutton = document.getElementById("scrollBtn");
