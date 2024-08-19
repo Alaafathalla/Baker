@@ -161,88 +161,6 @@ color: white;
 background-color: #ff9707;
   }
 
-/* General styles */
-.gallery img {
-    object-fit: cover;
-    width: 100%;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.gallery img :hover{
-    width: 120%;
-}
-
-.photo {
-    opacity: 1;
-    transform: rotateY(90deg); 
-    display: block;
-}
-.gallery input:active{
-    color: #ff9707 !important;
-}
-.photo.hide {
-    opacity: 0;
-    transform: rotateY(90deg);
-    display: none;
-}
-
-.photo.show {
-    opacity: 1;
-    transform: rotateY(0); 
-    display: block;
-}
-
-.gallery .photo {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .gallery .photo img {
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  .gallery .photo:hover img {
-    transform: scale(1.2);
-  }
-  
-  .gallery .photo .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .gallery .photo:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .overlay-content {
-    text-align: center;
-  }
-  
-  .overlay-content h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    animation: fadeIn 0.5s ease;
-  }
-  
-  .overlay-content p {
-    margin: 5px 0 0;
-    font-size: 16px;
-    animation: fadeIn 0.5s ease 0.3s;
-  }
   
   @keyframes fadeIn {
     from {
@@ -288,6 +206,125 @@ background-color: #ff9707;
       width: 60px; 
   }
   
+
+  /* Resetting padding and margin for all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* General styles for the gallery container */
+.container.gallery {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    color: #414c64;
+    margin-bottom: 1rem;
+}
+
+.gallery p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+/* Button group styles */
+.btn-group .btn {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-group .btn:hover,
+.btn-group .btn.active {
+    background-color: #ff9707;
+    color: #fff;
+}
+
+.btn-group .btn:focus {
+    outline: none;
+}
+
+/* Gallery grid */
+.row.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo img {
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Image hover effect: Zoom in */
+.photo:hover img {
+    transform: scale(1.2);
+}
+
+/* Overlay styles */
+.gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none; /* Prevents the overlay from interfering with the hover */
+}
+
+/* Overlay hover effect: Slide up and appear */
+.photo:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Overlay content */
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-content h3,
+.overlay-content p {
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Keyframes for text animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .team2{
     background-color: #ffffff;
