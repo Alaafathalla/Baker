@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+
+
     // Counter animation
     const counts = document.querySelectorAll(".count");
     const speed = 600; // You can adjust the speed as needed
