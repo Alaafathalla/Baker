@@ -34,7 +34,7 @@
 
 
 .header{
-    background: linear-gradient(to right, rgb(45 45 57), rgb(2 2 4)), url(../images/hero-bg.jpg);
+    background: linear-gradient(to right, rgba(85, 100, 130, 1), rgba(65, 67 ,99, 1)), url(../images/hero-bg.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     display: flex;
